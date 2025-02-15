@@ -17,7 +17,14 @@ const NameAddress = ({
   const typeLabel = TYPE_LABELS[type];
 
   return (
-    <View style={{ flexDirection: "row", ...styles }}>
+    <View
+      style={{
+        flexDirection: "row",
+        minHeight: "80px",
+        flexGrow: 1,
+        ...styles,
+      }}
+    >
       <View style={{ flex: 0.6 }}>
         <Text
           style={{ fontSize: 7, fontFamily: "Helvetica-Bold" }}

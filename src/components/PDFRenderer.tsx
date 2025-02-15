@@ -20,6 +20,14 @@ import IssuingCarriersAgentNameAndCity from "./mawb/IssuingCarriersAgentNameAndC
 import AgentInfo from "./mawb/AgentInfo";
 import AirportOfDeparture from "./mawb/AirportOfDeparture";
 import RoutingAndDestination from "./mawb/RoutingAndDestination";
+import AirportOfDestination from "./mawb/AirportOfDestination";
+import IssuedBy from "./mawb/IssuedBy";
+import Agreement from "./mawb/Agreement";
+import AccountInfo from "./mawb/AccountInfo";
+import DeclaredValues from "./mawb/DeclaredValues";
+import Insurance from "./mawb/Insurance";
+import HandlingInfo from "./mawb/HandlingInfo";
+import TableFooterRow from "./mawb/TableFooterRow";
 
 // Styles for PDF
 const styles = StyleSheet.create({
@@ -27,55 +35,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 10,
   },
-  topText: {
-    fontSize: 10,
-    fontWeight: 600,
-    marginBottom: 6,
-  },
-  container: {
-    // border: "1px solid #ccc",
-  },
-  topTextContainer: {
-    flexDirection: "row", // Enables horizontal layout
-    justifyContent: "space-between", // Adjust spacing
-  },
-  flexRow: {
-    flexDirection: "row", // Enables horizontal layout
-  },
   borderTop: {
     borderTop: "1px solid black",
   },
-  halfWidthColumn: {
-    flex: 1,
-    border: "1px solid black",
-    marginRight: "-1px",
-    padding: 0,
-  },
-  biggerCol: {
-    flex: 0.6,
-  },
-  smallerCol: {
-    flex: 0.4,
-  },
-  smallerColTopLeft: {
-    borderLeft: "1px solid black",
-    borderBottom: "1px solid black",
-  },
-  routingDestination: {
-    borderTop: "1px solid black",
-    flexDirection: "row",
-  },
-  column: {
-    borderRight: "1px solid black",
-    justifyContent: "center",
-    textAlign: "center",
-  },
-  wideColumn: {
-    flex: 3,
-    borderRight: "1px solid black",
-    justifyContent: "center",
-  },
-  flex1: { flex: "1" },
 });
 
 // PDF Document Component
@@ -84,9 +46,15 @@ const InvoiceDocument = ({ barcode }) => (
     <Page size="A4" style={styles.page}>
       <PageStartRow leftText="807 | KUL | 11223590" rightText="807-11223590" />
 
-      <View style={styles.container}>
-        <View style={styles.flexRow}>
-          <View style={styles.halfWidthColumn}>
+      <View>
+        <View style={{ flexDirection: "row" }}>
+          <View
+            style={{
+              flex: 1,
+              border: "1px solid black",
+              borderRight: 0,
+            }}
+          >
             <NameAddress
               type="shipper"
               name="TEST TESTA TESTC"
@@ -101,7 +69,7 @@ const InvoiceDocument = ({ barcode }) => (
               address="47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
               accountNumber="100029"
               id=""
-              styles={{ borderTop: "1px solid black", minHeight: "80px" }}
+              styles={{ borderTop: "1px solid black" }}
             />
             <IssuingCarriersAgentNameAndCity agentNameAndCity="99Speed LGK LGK" />
             <AgentInfo agentIATACode="1234567" agentAccountNo="100223" />
@@ -109,337 +77,127 @@ const InvoiceDocument = ({ barcode }) => (
             <RoutingAndDestination
               styles={{ borderTop: "1px solid black", minHeight: "40px" }}
             />
-
-            <View style={styles.routingDestination}>
-              <View style={styles.column}>
-                <Text style={styles.topText}>To</Text>
-                <Text style={styles.topText}>SIN</Text>
-              </View>
-              <View style={[styles.column, styles.flexRow, styles.flex1]}>
-                <View>
-                  <Text style={styles.topText}>By first </Text>
-                  <Text style={styles.topText}>Carrier</Text>
-                  <Text style={styles.topText}>AK</Text>
-                </View>
-                <View style={{ flex: 1 }}>
-                  <View style={{ marginLeft: "20px", marginRight: "20px" }}>
-                    <Trapezoid text={"Routing and destination"} />
-                  </View>
-                </View>
-              </View>
-
-              <View style={styles.column}>
-                <Text style={styles.topText}>To</Text>
-              </View>
-              <View style={styles.column}>
-                <Text style={styles.topText}>By</Text>
-              </View>
-              <View style={styles.column}>
-                <Text style={styles.topText}>To</Text>
-              </View>
-              <View style={(styles.column, { borderRight: 0 })}>
-                <Text style={styles.topText}>By</Text>
-              </View>
-            </View>
-            <View style={styles.borderTop}>
-              <View style={{ flexDirection: "row" }}>
-                <View style={{ flex: 0.4, borderRight: "1px solid black" }}>
-                  <Text style={styles.topText}>Airport of Destination</Text>
-                  <Text style={styles.topText}>SIN - SINGAPORE CHANGI APT</Text>
-                </View>
-                <View
-                  style={{
-                    flex: 0.6,
-                    flexDirection: "column",
-                  }}
-                >
-                  <View>
-                    <View style={{ marginLeft: "20px", marginRight: "20px" }}>
-                      <Trapezoid text={"Requested Flight / Date"} />
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      flex: 1,
-                      flexDirection: "row",
-                    }}
-                  >
-                    <View
-                      style={{
-                        flex: 1,
-                        borderRight: "1px solid black",
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text style={styles.topText}>AK721</Text>
-                    </View>
-                    <View
-                      style={{
-                        flex: 1,
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text style={styles.topText}>19/02/2025</Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
+            <AirportOfDestination
+              airportOfDestination="SIN - SINGAPORE CHANGI APT"
+              flightNo="AK721"
+              date="12/12/2024"
+            />
           </View>
 
-          <View style={styles.halfWidthColumn}>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <View style={{ flexGrow: 1 }}>
-                <Text style={{ fontSize: 10 }}>Not negotiable</Text>
-                <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-                  Air Waybill
-                </Text>
-                <Text style={{ fontSize: 10 }}>AIR CONSIGNMENT NOTE</Text>
-                <Text
-                  style={{ fontSize: 10, fontWeight: "bold", marginTop: 5 }}
-                >
-                  Issued by
-                </Text>
-                <Text style={{ fontSize: 10 }}>AirAsia,</Text>
-              </View>
-
-              <Image
-                style={{ width: 50, height: 50 }}
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/1200px-AirAsia_New_Logo.svg.png"
-              />
-            </View>
-
-            <View style={styles.borderTop}>
-              <Text style={styles.topText}>
-                Copies 1, 2, and 3 of this Air Waybill are originals and have
-                the same validity
-              </Text>
-            </View>
-            <View style={styles.borderTop}>
-              <Text style={{ fontSize: "8px" }}>
-                It is agreed that the goods described herein are accepted in
-                apparent good order and condition (except as noted) for carriage
-                SUBJECT TO THE CONDITIONS OF CONTRACT ON THE REVERSE HEREOF. ALL
-                GOODS MAY BE CARRIED BY ANY OTHER MEANS INCLUDING ROAD OR ANY
-                OTHER CARRIER UNLESS SPECIFIC CONTRARY INSTRUCTIONS ARE GIVEN
-                HEREON BY THE SHIPPER, AND SHIPPER AGREES THAT THE SHIPMENT MAY
-                BE CARRIED VIA INTERMEDIATE STOPPING PLACES WHICH THE CARRIER
-                DEEMS APPROPRIATE. THE SHIPPER'S ATTENTION IS DRAWN TO THE
-                NOTICE CONCERNING CARRIER'S LIMITATION OF LIABILITY. Shipper may
-                increase such limitation of liability by declaring a higher
-                value for carriage and paying a supplemental charge if required.
-              </Text>
-            </View>
-            <View style={[styles.borderTop, { height: "50px" }]}>
-              <Text style={styles.topText}>Account Information</Text>
-            </View>
-
-            <View style={[styles.borderTop, { flexDirection: "row" }]}>
-              <View style={{ flex: 1, flexDirection: "row" }}>
-                <View style={{ borderRight: "1px solid black" }}>
-                  <Text style={{ fontSize: "8px" }}>Currency</Text>
-                  <Text style={{ fontSize: "8px" }}>MYR</Text>
-                </View>
-                <View style={{ borderRight: "1px solid black" }}>
-                  <Text style={{ fontSize: "8px" }}>Chgs</Text>
-                  <Text style={{ fontSize: "8px" }}>Code</Text>
-                  <Text style={{ fontSize: "8px" }}>PX</Text>
-                </View>
-                <View style={{ borderRight: "1px solid black" }}>
-                  <View style={{ borderBottom: "1px solid black" }}>
-                    <Text style={{ fontSize: "8px" }}>WT/VAL</Text>
-                  </View>
-                  <View style={{ flexDirection: "row" }}>
-                    <View style={{ borderRight: "1px solid black" }}>
-                      <Text style={{ fontSize: "8px" }}>PPD</Text>
-                      <Text style={{ fontSize: "8px" }}>XX</Text>
-                    </View>
-                    <View>
-                      <Text style={{ fontSize: "8px" }}>COLL</Text>
-                      <Text style={{ fontSize: "8px" }}></Text>
-                    </View>
-                  </View>
-                </View>
-                <View style={{ borderRight: "1px solid black" }}>
-                  <View style={{ borderBottom: "1px solid black" }}>
-                    <Text style={{ fontSize: "8px" }}>Other</Text>
-                  </View>
-                  <View style={{ flexDirection: "row" }}>
-                    <View style={{ borderRight: "1px solid black" }}>
-                      <Text style={{ fontSize: "8px" }}>PPD</Text>
-                      <Text style={{ fontSize: "8px" }}>XX</Text>
-                    </View>
-                    <View>
-                      <Text style={{ fontSize: "8px" }}>COLL</Text>
-                      <Text style={{ fontSize: "8px" }}></Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-              <View style={{ flex: 1, flexDirection: "row" }}>
-                <View style={{ flex: 1, borderRight: "1px solid black" }}>
-                  <Text style={{ fontSize: "8px" }}>Declared Value for</Text>
-                  <Text style={{ fontSize: "8px" }}>Carriage</Text>
-                  <Text style={{ fontSize: "8px" }}> NVD</Text>
-                </View>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontSize: "8px" }}>Declared Value for</Text>
-                  <Text style={{ fontSize: "8px" }}>Customs</Text>
-                  <Text style={{ fontSize: "8px" }}> NVC</Text>
-                </View>
-              </View>
-            </View>
-
-            <View style={[styles.borderTop, { flexDirection: "row" }]}>
-              <View
-                style={{
-                  flex: 0.3,
-                  borderRight: "1px solid black",
-                }}
-              >
-                <Text style={styles.topText}>Amount of insurance</Text>
-                <Text style={styles.topText}>XXX</Text>
-              </View>
-              <View style={{ flex: 0.7 }}>
-                <Text style={styles.topText}>
-                  INSURANCE - If carrier offers insurance and such insurance is
-                  requested in accordance with conditions on reverse hereof,
-                  indicate amount to be insured in figures in box marked Amount.
-                </Text>
-              </View>
-            </View>
+          <View style={{ flex: 1, border: "1px solid black" }}>
+            <IssuedBy airWaybill="AIR CONSIGNMENT NOTE" issuedby="AirAsia" />
+            <Agreement />
+            <AccountInfo accountInformation="" />
+            <DeclaredValues
+              currency="MYR"
+              chargesCode="PX"
+              weightValuePrepaid="XX"
+              weightValueCollect=""
+              otherChargesPrepaid="XX"
+              otherChargesCollect=""
+              declaredValueCarriage="NVD"
+              declaredValueCustoms="NVC"
+            />
+            <Insurance amountOfInsurance="XXX" />
           </View>
         </View>
+        <HandlingInfo handlingInfo="SHC: Fruit, vegetables" />
+
         <View
           style={{
-            border: "1px solid black",
-            borderTop: 0,
-            marginRight: "-1px",
+            borderLeft: "1px solid black ",
+            borderRight: "1px solid black",
           }}
         >
-          <View
-            style={{
-              position: "relative",
-              height: "40px",
-              flexDirection: "column",
-            }}
-          >
-            <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-              Handling Information
-            </Text>
-            <Text style={{ fontSize: 10 }}>SHC: Fruit, vegetables</Text>
-            <View
-              style={{
-                position: "absolute",
-                right: 0,
-                bottom: 0,
-                borderTop: "1px solid black",
-                borderLeft: "1px solid black",
-                width: "100px",
-                padding: "2px",
-              }}
-            >
-              <Text
-                style={{
-                  fontSize: 12,
-                  fontWeight: "bold",
-                }}
-              >
-                SCI
-              </Text>
-            </View>
+          <View style={{ border: "1px solid black" }}>
+            <TableHeaderRow />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={
+                "Long.. nature and quantity text lorem some more text more text and more text and even more text"
+              }
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableMainRow
+              noOfPieces={"16"}
+              grossWeight={"600"}
+              unit={"K"}
+              rateClass={"Q"}
+              commodityItemNo={"0001"}
+              chargeableWeight={"600"}
+              rate={"5"}
+              total={"3000"}
+              natureAndQuantity={"Long.. nature and quantity text"}
+            />
+            <TableFooterRow
+              totalNoOfPieces="20"
+              totalGrossWeight="1000"
+              totalOfTotal="5000"
+            />
           </View>
         </View>
-        <View style={{ border: "1px solid black" }}>
-          <TableHeaderRow />
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text lorem "}
-          />
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />{" "}
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />{" "}
-          <TableMainRow
-            noOfPieces={"16"}
-            grossWeight={"600"}
-            unit={"K"}
-            rateClass={"Q"}
-            commodityItemNo={"0001"}
-            chargeableWeight={"600"}
-            rate={"5"}
-            total={"3000"}
-            natureAndQuantity={"Long.. nature and quantity text"}
-          />{" "}
-        </View>
+
         <View style={{ flexDirection: "row" }}>
           <View style={{ border: "1px solid black", flex: 1 }}>
             <View>

@@ -25,18 +25,20 @@ const RoutingAndDestination = ({ styles = {} }) => {
       >
         <View
           style={{
+            flex: 1,
             flexDirection: "column",
             justifyContent: "space-between",
           }}
         >
-          <View style={{}}>
-            <Text style={{ fontSize: 7 }}>By first </Text>
-            <Text style={{ fontSize: 7 }}>Carrier</Text>
+          <View style={{ padding: "2px" }}>
+            <Text style={{ fontSize: 7, textAlign: "center" }}>By first </Text>
+            <Text style={{ fontSize: 7, textAlign: "center" }}>Carrier</Text>
           </View>
-          <Text style={{ fontSize: 7 }}>AK</Text>
+          <Text style={{ fontSize: 7, padding: "2px" }}>AK</Text>
         </View>
-        <View style={{ flex: 1 }}>
-          <View style={{ marginLeft: "40px", marginRight: "30px" }}>
+
+        <View style={{ flex: 2 }}>
+          <View style={{ marginRight: "20px" }}>
             <Trapezoid text={"Routing and destination"} />
           </View>
         </View>
@@ -47,7 +49,7 @@ const RoutingAndDestination = ({ styles = {} }) => {
           borderRight: "1px solid black",
           justifyContent: "space-between",
           textAlign: "center",
-          padding: "1px",
+          padding: "2px",
         }}
       >
         <Text style={{ fontSize: 7 }}>To</Text>
@@ -58,7 +60,7 @@ const RoutingAndDestination = ({ styles = {} }) => {
           borderRight: "1px solid black",
           justifyContent: "space-between",
           textAlign: "center",
-          padding: "1px",
+          padding: "2px",
         }}
       >
         <Text style={{ fontSize: 7 }}>By</Text>
@@ -69,7 +71,7 @@ const RoutingAndDestination = ({ styles = {} }) => {
           borderRight: "1px solid black",
           justifyContent: "space-between",
           textAlign: "center",
-          padding: "1px",
+          padding: "2px",
         }}
       >
         <Text style={{ fontSize: 7 }}>To</Text>
@@ -79,7 +81,7 @@ const RoutingAndDestination = ({ styles = {} }) => {
         style={{
           justifyContent: "space-between",
           textAlign: "center",
-          padding: "1px",
+          padding: "2px",
         }}
       >
         <Text style={{ fontSize: 7 }}>By</Text>

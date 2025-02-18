@@ -28,7 +28,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{noOfPieces}</Text>
+        <Text style={{ textAlign: "center" }}>{noOfPieces}</Text>
       </View>
       <View
         style={{
@@ -38,7 +38,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{grossWeight}</Text>
+        <Text style={{ textAlign: "center" }}>{grossWeight}</Text>
       </View>
       <View
         style={{
@@ -48,7 +48,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{unit}</Text>
+        <Text style={{ textAlign: "center" }}>{unit}</Text>
       </View>
       <View
         style={{
@@ -58,7 +58,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{rateClass}</Text>
+        <Text style={{ textAlign: "center" }}>{rateClass}</Text>
       </View>
       <View
         style={{
@@ -68,9 +68,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>
-          {commodityItemNo}
-        </Text>
+        <Text style={{ textAlign: "center" }}>{commodityItemNo}</Text>
       </View>
       <View
         style={{
@@ -80,9 +78,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>
-          {chargeableWeight}
-        </Text>
+        <Text style={{ textAlign: "center" }}>{chargeableWeight}</Text>
       </View>
       <View
         style={{
@@ -92,7 +88,7 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{rate}</Text>
+        <Text style={{ textAlign: "center" }}>{rate}</Text>
       </View>
       <View
         style={{
@@ -102,12 +98,10 @@ const TableMainRow = ({
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{total}</Text>
+        <Text style={{ textAlign: "center" }}>{total}</Text>
       </View>
       <View style={{ flex: 4.5, padding: 2 }}>
-        <Text style={{ fontSize: 8, textAlign: "center" }}>
-          {natureAndQuantity}
-        </Text>
+        <Text style={{ textAlign: "center" }}>{natureAndQuantity}</Text>
       </View>
     </View>
   );

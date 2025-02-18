@@ -13,8 +13,8 @@ const RoutingAndDestination = ({ styles = {} }) => {
           padding: "1px",
         }}
       >
-        <Text style={{ fontSize: 7 }}>To</Text>
-        <Text style={{ fontSize: 7 }}>SIN</Text>
+        <Text>To</Text>
+        <Text>SIN</Text>
       </View>
       <View
         style={{
@@ -31,10 +31,10 @@ const RoutingAndDestination = ({ styles = {} }) => {
           }}
         >
           <View style={{ padding: "2px" }}>
-            <Text style={{ fontSize: 7, textAlign: "center" }}>By first </Text>
-            <Text style={{ fontSize: 7, textAlign: "center" }}>Carrier</Text>
+            <Text style={{ textAlign: "center" }}>By first </Text>
+            <Text style={{ textAlign: "center" }}>Carrier</Text>
           </View>
-          <Text style={{ fontSize: 7, padding: "2px" }}>AK</Text>
+          <Text style={{ padding: "2px" }}>AK</Text>
         </View>
 
         <View style={{ flex: 2 }}>
@@ -52,8 +52,8 @@ const RoutingAndDestination = ({ styles = {} }) => {
           padding: "2px",
         }}
       >
-        <Text style={{ fontSize: 7 }}>To</Text>
-        <Text style={{ fontSize: 7 }}></Text>
+        <Text>To</Text>
+        <Text></Text>
       </View>
       <View
         style={{
@@ -63,8 +63,8 @@ const RoutingAndDestination = ({ styles = {} }) => {
           padding: "2px",
         }}
       >
-        <Text style={{ fontSize: 7 }}>By</Text>
-        <Text style={{ fontSize: 7 }}></Text>
+        <Text>By</Text>
+        <Text></Text>
       </View>
       <View
         style={{
@@ -74,8 +74,8 @@ const RoutingAndDestination = ({ styles = {} }) => {
           padding: "2px",
         }}
       >
-        <Text style={{ fontSize: 7 }}>To</Text>
-        <Text style={{ fontSize: 7 }}></Text>
+        <Text>To</Text>
+        <Text></Text>
       </View>
       <View
         style={{
@@ -84,8 +84,8 @@ const RoutingAndDestination = ({ styles = {} }) => {
           padding: "2px",
         }}
       >
-        <Text style={{ fontSize: 7 }}>By</Text>
-        <Text style={{ fontSize: 7 }}></Text>
+        <Text>By</Text>
+        <Text></Text>
       </View>
     </View>
   );

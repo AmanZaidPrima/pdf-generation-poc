@@ -12,8 +12,8 @@ const AccountInfo = ({ accountInformation = "" }) => {
         minHeight: "40px",
       }}
     >
-      <Text style={{ fontSize: 7 }}>Account Information</Text>
-      <Text style={{ fontSize: 7 }}>{accountInformation}</Text>
+      <Text>Account Information</Text>
+      <Text>{accountInformation}</Text>
     </View>
   );
 };

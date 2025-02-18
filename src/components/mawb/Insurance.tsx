@@ -17,11 +17,11 @@ const Insurance = ({ amountOfInsurance = "" }) => {
           justifyContent: "space-between",
         }}
       >
-        <Text style={{ fontSize: 7 }}>Amount of insurance</Text>
-        <Text style={{ fontSize: 7 }}>{amountOfInsurance}</Text>
+        <Text>Amount of insurance</Text>
+        <Text>{amountOfInsurance}</Text>
       </View>
       <View style={{ flex: 0.7, padding: "2px" }}>
-        <Text style={{ fontSize: 7 }}>
+        <Text>
           INSURANCE - If carrier offers insurance and such insurance is
           requested in accordance with conditions on reverse hereof, indicate
           amount to be insured in figures in box marked Amount.

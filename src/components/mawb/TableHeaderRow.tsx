@@ -17,7 +17,7 @@ const TableHeaderRow = () => {
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>No. of Pieces</Text>
+        <Text style={{ textAlign: "center" }}>No. of Pieces</Text>
       </View>
       <View
         style={{
@@ -27,7 +27,7 @@ const TableHeaderRow = () => {
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>Gross Weight</Text>
+        <Text style={{ textAlign: "center" }}>Gross Weight</Text>
       </View>
       <View
         style={{
@@ -37,7 +37,7 @@ const TableHeaderRow = () => {
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>Kg/lb</Text>
+        <Text style={{ textAlign: "center" }}>Kg/lb</Text>
       </View>
       <View
         style={{
@@ -55,7 +55,7 @@ const TableHeaderRow = () => {
             width: "50px",
           }}
         >
-          <Text style={{ fontSize: 7, textAlign: "center" }}>Rate Class</Text>
+          <Text style={{ textAlign: "center" }}>Rate Class</Text>
         </View>
       </View>
       <View
@@ -68,9 +68,7 @@ const TableHeaderRow = () => {
         }}
       >
         <View>
-          <Text style={{ fontSize: 7, textAlign: "center" }}>
-            Commodity Item No.
-          </Text>
+          <Text style={{ textAlign: "center" }}>Commodity Item No.</Text>
         </View>
       </View>
       <View
@@ -82,9 +80,7 @@ const TableHeaderRow = () => {
           borderLeft: "1px solid black",
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>
-          Chargeable Weight
-        </Text>
+        <Text style={{ textAlign: "center" }}>Chargeable Weight</Text>
       </View>
       <View
         style={{
@@ -94,7 +90,7 @@ const TableHeaderRow = () => {
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>Rate / Charge</Text>
+        <Text style={{ textAlign: "center" }}>Rate / Charge</Text>
       </View>
       <View
         style={{
@@ -104,10 +100,10 @@ const TableHeaderRow = () => {
           padding: 2,
         }}
       >
-        <Text style={{ fontSize: 7, textAlign: "center" }}>Total</Text>
+        <Text style={{ textAlign: "center" }}>Total</Text>
       </View>
       <View style={{ flex: 4.5, padding: 2 }}>
-        <Text style={{ fontSize: 7, textAlign: "center" }}>
+        <Text style={{ textAlign: "center" }}>
           Nature and Quantity of Goods
         </Text>
       </View>

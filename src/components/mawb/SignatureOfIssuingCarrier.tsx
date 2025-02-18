@@ -21,10 +21,10 @@ const SignatureOfIssuingCarrier = ({ date = "", place = "" }) => {
             borderBottom: "1px solid black",
           }}
         >
-          <Text style={{ fontSize: 8, textAlign: "center" }}>{date}</Text>
+          <Text style={{ textAlign: "center" }}>{date}</Text>
         </View>
         <View style={{ padding: "2px" }}>
-          <Text style={{ fontSize: 8, textAlign: "center" }}>EXECUTED ON</Text>
+          <Text style={{ textAlign: "center" }}>EXECUTED ON</Text>
         </View>
       </View>
       <View style={{ margin: "0 3px", flex: 0.15 }}>
@@ -34,10 +34,10 @@ const SignatureOfIssuingCarrier = ({ date = "", place = "" }) => {
             borderBottom: "1px solid black",
           }}
         >
-          <Text style={{ fontSize: 8, textAlign: "center" }}>{place}</Text>
+          <Text style={{ textAlign: "center" }}>{place}</Text>
         </View>
         <View style={{ padding: "2px" }}>
-          <Text style={{ fontSize: 8, textAlign: "center" }}>{"(Place)"}</Text>
+          <Text style={{ textAlign: "center" }}>{"(Place)"}</Text>
         </View>
       </View>
       <View style={{ margin: "0 3px", flex: 0.6 }}>
@@ -47,10 +47,10 @@ const SignatureOfIssuingCarrier = ({ date = "", place = "" }) => {
             borderBottom: "1px solid black",
           }}
         >
-          <Text style={{ fontSize: 8, textAlign: "center" }}></Text>
+          <Text style={{ textAlign: "center" }}></Text>
         </View>
         <View style={{ padding: "2px" }}>
-          <Text style={{ fontSize: 8, textAlign: "center" }}>
+          <Text style={{ textAlign: "center" }}>
             Signature of Issuing Carrier or its Agent
           </Text>
         </View>

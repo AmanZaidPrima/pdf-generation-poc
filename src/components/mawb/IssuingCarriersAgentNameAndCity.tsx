@@ -7,10 +7,10 @@ const IssuingCarriersAgentNameAndCity = ({
 }) => {
   return (
     <View style={{ borderTop: "1px solid black", padding: "2px", ...styles }}>
-      <Text style={{ fontSize: 8, marginBottom: "2px" }}>
+      <Text style={{ marginBottom: "2px" }}>
         Issuing Carrier's Agent Name and City
       </Text>
-      <Text style={{ fontSize: 8 }}>{agentNameAndCity}</Text>
+      <Text>{agentNameAndCity}</Text>
     </View>
   );
 };

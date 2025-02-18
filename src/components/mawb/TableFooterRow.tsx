@@ -21,9 +21,7 @@ const TableFooterRow = ({
           borderTop: "1px solid grey",
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>
-          {totalNoOfPieces}
-        </Text>
+        <Text style={{ textAlign: "center" }}>{totalNoOfPieces}</Text>
       </View>
       <View
         style={{
@@ -34,9 +32,7 @@ const TableFooterRow = ({
           borderTop: "1px solid grey",
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>
-          {totalGrossWeight}
-        </Text>
+        <Text style={{ textAlign: "center" }}>{totalGrossWeight}</Text>
       </View>
       <View
         style={{
@@ -87,7 +83,7 @@ const TableFooterRow = ({
           borderTop: "1px solid grey",
         }}
       >
-        <Text style={{ fontSize: 8, textAlign: "center" }}>{totalOfTotal}</Text>
+        <Text style={{ textAlign: "center" }}>{totalOfTotal}</Text>
       </View>
       <View style={{ flex: 4.5, padding: 2 }}></View>
     </View>

@@ -19,10 +19,10 @@ const HandlingInfo = ({ handlingInfo = "", style = {} }) => {
           padding: "2px 0px",
         }}
       >
-        <Text style={{ fontSize: 7, fontFamily: "Helvetica-Bold" }}>
+        <Text style={{ fontFamily: "Helvetica-Bold" }}>
           Handling Information
         </Text>
-        <Text style={{ fontSize: 7 }}>{handlingInfo}</Text>
+        <Text>{handlingInfo}</Text>
         <View
           style={{
             position: "absolute",
@@ -34,7 +34,7 @@ const HandlingInfo = ({ handlingInfo = "", style = {} }) => {
             padding: "2px",
           }}
         >
-          <Text style={{ fontSize: 7, fontFamily: "Helvetica-Bold" }}>SCI</Text>
+          <Text style={{ fontFamily: "Helvetica-Bold" }}>SCI</Text>
         </View>
       </View>
     </View>

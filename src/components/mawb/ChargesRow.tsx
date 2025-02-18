@@ -14,6 +14,7 @@ const ChargesRow = ({
         flexGrow: 1,
         flexDirection: "row",
         borderBottom: "1px solid black",
+        fontSize: 6,
       }}
     >
       <View
@@ -24,7 +25,7 @@ const ChargesRow = ({
           padding: 4,
         }}
       >
-        <Text style={{ fontSize: 6 }}>{firstCol}</Text>
+        <Text>{firstCol}</Text>
       </View>
       <View
         style={{
@@ -34,7 +35,7 @@ const ChargesRow = ({
           padding: 4,
         }}
       >
-        <Text style={{ fontSize: 6 }}>{secondCol}</Text>
+        <Text>{secondCol}</Text>
       </View>
       <View
         style={{
@@ -44,7 +45,7 @@ const ChargesRow = ({
           padding: 4,
         }}
       >
-        <Text style={{ fontSize: 6 }}>{thirdCol}</Text>
+        <Text>{thirdCol}</Text>
       </View>
       <View
         style={{
@@ -54,7 +55,7 @@ const ChargesRow = ({
           padding: 4,
         }}
       >
-        <Text style={{ fontSize: 6 }}>{forthCol}</Text>
+        <Text>{forthCol}</Text>
       </View>
       <View
         style={{
@@ -64,7 +65,7 @@ const ChargesRow = ({
           padding: 4,
         }}
       >
-        <Text style={{ fontSize: 6 }}>{fifthCol}</Text>
+        <Text>{fifthCol}</Text>
       </View>
     </View>
   );

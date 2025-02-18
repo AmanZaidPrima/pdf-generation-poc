@@ -22,17 +22,13 @@ const IssuedBy = ({ issuedby = "", airWaybill = "" }) => {
         }}
       >
         <View style={{ marginTop: "10px" }}>
-          <Text style={{ fontSize: 7 }}>Not negotiable</Text>
-          <Text style={{ fontSize: 7, fontFamily: "Helvetica-Bold" }}>
-            Air Waybill
-          </Text>
-          <Text style={{ fontSize: 7 }}>{airWaybill}</Text>
+          <Text>Not negotiable</Text>
+          <Text style={{ fontFamily: "Helvetica-Bold" }}>Air Waybill</Text>
+          <Text>{airWaybill}</Text>
         </View>
         <View style={{}}>
-          <Text style={{ fontSize: 7, fontFamily: "Helvetica-Bold" }}>
-            Issued by
-          </Text>
-          <Text style={{ fontSize: 7 }}>{issuedby}</Text>
+          <Text style={{ fontFamily: "Helvetica-Bold" }}>Issued by</Text>
+          <Text>{issuedby}</Text>
         </View>
       </View>
 

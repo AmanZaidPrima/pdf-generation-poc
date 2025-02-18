@@ -27,10 +27,11 @@ import ChargesAtDestination from "./mawb/ChargesAtDestination";
 import SignatureOfIssuingCarrier from "./mawb/SignatureOfIssuingCarrier";
 import TotalCollectAndBarCode from "./mawb/TotalCollectAndBarCode";
 import PageEndRow from "./mawb/PageEndRow";
+import { dummyData } from "../dummy_data";
 
 // PDF Document Component
 const InvoiceDocument = () => {
-  const arr = Array(10).fill("dummy");
+  const arr = dummyData.slice(0, 15);
 
   return (
     <Document>
@@ -148,18 +149,18 @@ const InvoiceDocument = () => {
                 "Long.. nature and quantity text lorem some more text more text and more text and even more text"
               }
             />
-            {arr.map((_, idx) => (
+            {arr.map((item, idx) => (
               <TableMainRow
-                noOfPieces={"16"}
-                grossWeight={"600"}
-                unit={"K"}
-                rateClass={"Q"}
-                commodityItemNo={"0001"}
-                chargeableWeight={"600"}
-                rate={"5"}
-                total={"3000"}
-                natureAndQuantity={"Long.. nature and quantity text"}
                 key={idx}
+                noOfPieces={item.noOfPieces}
+                grossWeight={item.grossWeight}
+                unit={item.unit}
+                rateClass={item.rateClass}
+                commodityItemNo={item.commodityItemNo}
+                chargeableWeight={item.chargeableWeight}
+                rate={item.rate}
+                total={item.total}
+                natureAndQuantity={item.natureAndQuantity}
               />
             ))}
             <TableMainRow style={{ flexGrow: 1 }} />
@@ -225,8 +226,8 @@ const InvoiceDocument = () => {
                 fifthCol={""}
               />
               <View style={{ padding: "4px", borderRight: "1px solid black" }}>
-                <Text style={{ fontSize: 8 }}>Other charges</Text>
-                <Text style={{ fontSize: 8 }}>AW 9.0</Text>
+                <Text>Other charges</Text>
+                <Text>AW 9.0</Text>
               </View>
             </View>
           </View>

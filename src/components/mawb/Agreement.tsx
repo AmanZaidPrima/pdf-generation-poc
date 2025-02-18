@@ -5,7 +5,7 @@ const Agreement = () => {
   return (
     <>
       <View style={{ borderTop: "1px solid black", padding: "1px" }}>
-        <Text style={{ fontSize: 7 }}>
+        <Text>
           Copies 1, 2, and 3 of this Air Waybill are originals and have the same
           validity
         </Text>
@@ -13,7 +13,7 @@ const Agreement = () => {
       <View
         style={{ borderTop: "1px solid black", padding: "1px", flexGrow: 1 }}
       >
-        <Text style={{ fontSize: 7 }}>
+        <Text>
           It is agreed that the goods described herein are accepted in apparent
           good order and condition (except as noted) for carriage SUBJECT TO THE
           CONDITIONS OF CONTRACT ON THE REVERSE HEREOF. ALL GOODS MAY BE CARRIED

@@ -8,16 +8,13 @@ const PageEndRow = () => {
         <Text
           style={{
             textAlign: "center",
-            fontSize: 7,
           }}
         >
           {"Original 1 (for Issuing Carrier)"}
         </Text>
       </View>
       <View style={{ flex: 1 }}>
-        <Text style={{ fontSize: 7 }}>
-          This is a Computer Generated Air Way Bill
-        </Text>
+        <Text>This is a Computer Generated Air Way Bill</Text>
       </View>
     </View>
   );

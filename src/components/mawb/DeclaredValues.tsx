@@ -28,8 +28,8 @@ const DeclaredValues = ({
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 7, padding: "1px" }}>Currency</Text>
-          <Text style={{ fontSize: 7 }}>{currency}</Text>
+          <Text style={{ padding: "1px" }}>Currency</Text>
+          <Text>{currency}</Text>
         </View>
         <View
           style={{
@@ -40,10 +40,10 @@ const DeclaredValues = ({
           }}
         >
           <View style={{ padding: "1px" }}>
-            <Text style={{ fontSize: 7 }}>Chgs</Text>
-            <Text style={{ fontSize: 7 }}>Code</Text>
+            <Text>Chgs</Text>
+            <Text>Code</Text>
           </View>
-          <Text style={{ fontSize: 7 }}>{chargesCode}</Text>
+          <Text>{chargesCode}</Text>
         </View>
         <View
           style={{
@@ -52,9 +52,7 @@ const DeclaredValues = ({
           }}
         >
           <View style={{ borderBottom: "1px solid black" }}>
-            <Text style={{ fontSize: 7, textAlign: "center", padding: "1px" }}>
-              WT/VAL
-            </Text>
+            <Text style={{ textAlign: "center", padding: "1px" }}>WT/VAL</Text>
           </View>
           <View style={{ flexDirection: "row", flex: 1 }}>
             <View
@@ -65,8 +63,8 @@ const DeclaredValues = ({
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>PPD</Text>
-              <Text style={{ fontSize: 7 }}>{weightValuePrepaid}</Text>
+              <Text>PPD</Text>
+              <Text>{weightValuePrepaid}</Text>
             </View>
             <View
               style={{
@@ -75,8 +73,8 @@ const DeclaredValues = ({
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>COLL</Text>
-              <Text style={{ fontSize: 7 }}>{weightValueCollect}</Text>
+              <Text>COLL</Text>
+              <Text>{weightValueCollect}</Text>
             </View>
           </View>
         </View>
@@ -87,9 +85,7 @@ const DeclaredValues = ({
           }}
         >
           <View style={{ borderBottom: "1px solid black" }}>
-            <Text style={{ fontSize: 7, textAlign: "center", padding: "1px" }}>
-              Other
-            </Text>
+            <Text style={{ textAlign: "center", padding: "1px" }}>Other</Text>
           </View>
           <View style={{ flexDirection: "row", flex: 1 }}>
             <View
@@ -100,8 +96,8 @@ const DeclaredValues = ({
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>PPD</Text>
-              <Text style={{ fontSize: 7 }}>{otherChargesPrepaid}</Text>
+              <Text>PPD</Text>
+              <Text>{otherChargesPrepaid}</Text>
             </View>
             <View
               style={{
@@ -110,8 +106,8 @@ const DeclaredValues = ({
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>COLL</Text>
-              <Text style={{ fontSize: 7 }}>{otherChargesCollect}</Text>
+              <Text>COLL</Text>
+              <Text>{otherChargesCollect}</Text>
             </View>
           </View>
         </View>
@@ -125,8 +121,8 @@ const DeclaredValues = ({
             padding: "1px",
           }}
         >
-          <Text style={{ fontSize: 7 }}>Declared Value for </Text>
-          <Text style={{ fontSize: 7 }}>Carriage</Text>
+          <Text>Declared Value for </Text>
+          <Text>Carriage</Text>
           <View
             style={{
               flex: 1,
@@ -135,12 +131,12 @@ const DeclaredValues = ({
               alignItems: "center",
             }}
           >
-            <Text style={{ fontSize: 7 }}>{declaredValueCarriage}</Text>
+            <Text>{declaredValueCarriage}</Text>
           </View>
         </View>
         <View style={{ flex: 1, flexDirection: "column", padding: "1px" }}>
-          <Text style={{ fontSize: 7 }}>Declared Value for </Text>
-          <Text style={{ fontSize: 7 }}>Customs</Text>
+          <Text>Declared Value for </Text>
+          <Text>Customs</Text>
           <View
             style={{
               flex: 1,
@@ -149,7 +145,7 @@ const DeclaredValues = ({
               alignItems: "center",
             }}
           >
-            <Text style={{ fontSize: 7 }}>{declaredValueCustoms}</Text>
+            <Text>{declaredValueCustoms}</Text>
           </View>
         </View>
       </View>

@@ -23,8 +23,8 @@ const AirportOfDestination = ({
             padding: "2px 1px",
           }}
         >
-          <Text style={{ fontSize: 7 }}>Airport of Destination</Text>
-          <Text style={{ fontSize: 7 }}>{airportOfDestination}</Text>
+          <Text>Airport of Destination</Text>
+          <Text>{airportOfDestination}</Text>
         </View>
         <View
           style={{
@@ -52,7 +52,7 @@ const AirportOfDestination = ({
                 justifyContent: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>{flightNo}</Text>
+              <Text>{flightNo}</Text>
             </View>
             <View
               style={{
@@ -62,7 +62,7 @@ const AirportOfDestination = ({
                 justifyContent: "center",
               }}
             >
-              <Text style={{ fontSize: 7 }}>{date}</Text>
+              <Text>{date}</Text>
             </View>
           </View>
         </View>

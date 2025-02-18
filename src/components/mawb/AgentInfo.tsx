@@ -12,7 +12,7 @@ const AgentInfo = ({ agentIATACode = "", agentAccountNo = "" }) => {
             padding: "2px",
           }}
         >
-          <Text style={{ fontSize: 7 }}>Agent's IATA Code</Text>
+          <Text>Agent's IATA Code</Text>
         </View>
         <View
           style={{
@@ -20,7 +20,7 @@ const AgentInfo = ({ agentIATACode = "", agentAccountNo = "" }) => {
             padding: "2px",
           }}
         >
-          <Text style={{ fontSize: 7 }}>{agentIATACode}</Text>
+          <Text>{agentIATACode}</Text>
         </View>
       </View>
       <View style={{ flex: 1 }}>
@@ -30,10 +30,10 @@ const AgentInfo = ({ agentIATACode = "", agentAccountNo = "" }) => {
             padding: "2px",
           }}
         >
-          <Text style={{ fontSize: 7 }}>Account No.</Text>
+          <Text>Account No.</Text>
         </View>
         <View style={{ padding: "2px" }}>
-          <Text style={{ fontSize: 7 }}>{agentAccountNo}</Text>
+          <Text>{agentAccountNo}</Text>
         </View>
       </View>
     </View>

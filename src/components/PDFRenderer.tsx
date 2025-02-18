@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
+import React from "react";
+import { Document, Page, Text, View } from "@react-pdf/renderer";
 import { PDFViewer } from "@react-pdf/renderer";
 import TableMainRow from "./mawb/TableMainRow";
 import TableHeaderRow from "./mawb/TableHeaderRow";
@@ -172,7 +172,6 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              // flexGrow: 1,
               flexDirection: "row",
               borderTop: "1px solid black",
               marginTop: "-1px",
@@ -234,7 +233,6 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              // flexGrow: 1,
               flexDirection: "row",
               borderBottom: "1px solid black",
               marginBottom: "-1px",
@@ -287,7 +285,6 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              // flexGrow: 1,
               flexDirection: "row",
             }}
             key={"random"}

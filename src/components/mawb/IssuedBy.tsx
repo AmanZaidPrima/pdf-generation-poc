@@ -9,7 +9,6 @@ const IssuedBy = ({ issuedby = "", airWaybill = "" }) => {
         justifyContent: "space-between",
         alignItems: "center",
         paddingRight: "5px",
-        minHeight: "80px",
         flexGrow: 1,
       }}
     >

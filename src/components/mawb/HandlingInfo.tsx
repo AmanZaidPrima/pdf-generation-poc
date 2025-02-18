@@ -1,12 +1,13 @@
 import { Text, View } from "@react-pdf/renderer";
 import React from "react";
 
-const HandlingInfo = ({ handlingInfo = "" }) => {
+const HandlingInfo = ({ handlingInfo = "", style = {} }) => {
   return (
     <View
       style={{
         border: "1px solid black",
         borderTop: 0,
+        ...style,
       }}
     >
       <View

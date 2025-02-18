@@ -5,11 +5,11 @@ const AccountInfo = ({ accountInformation = "" }) => {
   return (
     <View
       style={{
-        borderTop: "1px solid black",
+        flexGrow: 1,
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "1px",
-        height: "40px",
+        minHeight: "40px",
       }}
     >
       <Text style={{ fontSize: 7 }}>Account Information</Text>

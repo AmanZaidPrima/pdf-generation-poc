@@ -1,10 +1,17 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
 
-const ChargesRow = ({ firstCol, secondCol, thirdCol, forthCol, fifthCol }) => {
+const ChargesRow = ({
+  firstCol = "",
+  secondCol = "",
+  thirdCol = "",
+  forthCol = "",
+  fifthCol = "",
+}) => {
   return (
     <View
       style={{
+        flexGrow: 1,
         flexDirection: "row",
         borderBottom: "1px solid black",
       }}

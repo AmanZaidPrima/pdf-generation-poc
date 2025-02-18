@@ -20,7 +20,6 @@ const NameAddress = ({
     <View
       style={{
         flexDirection: "row",
-        minHeight: "80px",
         flexGrow: 1,
         ...styles,
       }}

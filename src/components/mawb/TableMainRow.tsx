@@ -101,7 +101,7 @@ const TableMainRow = ({
         <Text style={{ textAlign: "center" }}>{total}</Text>
       </View>
       <View style={{ flex: 4.5, padding: 2 }}>
-        <Text style={{ textAlign: "center" }}>{natureAndQuantity}</Text>
+        <Text style={{ textAlign: "left" }}>{natureAndQuantity}</Text>
       </View>
     </View>
   );

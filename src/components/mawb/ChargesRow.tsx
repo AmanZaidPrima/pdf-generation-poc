@@ -22,7 +22,8 @@ const ChargesRow = ({
           flex: 1,
           borderRightWidth: 1,
           borderColor: "black",
-          padding: 4,
+          padding: 1,
+          minHeight: "10px",
         }}
       >
         <Text>{firstCol}</Text>
@@ -32,7 +33,8 @@ const ChargesRow = ({
           flex: 1.4,
           borderRightWidth: 1,
           borderColor: "black",
-          padding: 4,
+          padding: 1,
+          minHeight: "10px",
         }}
       >
         <Text>{secondCol}</Text>
@@ -42,7 +44,8 @@ const ChargesRow = ({
           flex: 1.4,
           borderRightWidth: 1,
           borderColor: "black",
-          padding: 4,
+          padding: 1,
+          minHeight: "10px",
         }}
       >
         <Text>{thirdCol}</Text>
@@ -52,7 +55,8 @@ const ChargesRow = ({
           flex: 1.4,
           borderRightWidth: 1,
           borderColor: "black",
-          padding: 4,
+          padding: 1,
+          minHeight: "10px",
         }}
       >
         <Text>{forthCol}</Text>
@@ -62,7 +66,8 @@ const ChargesRow = ({
           flex: 1.4,
           borderRightWidth: 1,
           borderColor: "black",
-          padding: 4,
+          padding: 1,
+          minHeight: "10px",
         }}
       >
         <Text>{fifthCol}</Text>

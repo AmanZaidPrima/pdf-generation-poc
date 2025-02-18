@@ -31,7 +31,8 @@ import { dummyData } from "../dummy_data";
 
 // PDF Document Component
 const InvoiceDocument = () => {
-  const arr = dummyData.slice(0, 15);
+  console.log("length:", dummyData.length);
+  const arr = dummyData.slice(0, 5);
 
   return (
     <Document>
@@ -64,15 +65,15 @@ const InvoiceDocument = () => {
             >
               <NameAddress
                 type="shipper"
-                name="TEST TESTA TESTC"
-                address="Malaysia"
+                name="TEST NAME"
+                address="NO. 5-2, JALAN PUTRA MAHKOTA 7/88, SEKSYEN 7, PUTRA HEIGHTS, 47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
                 accountNumber="100223"
                 id=""
               />
               <NameAddress
                 type="consignee"
-                name="NO. 5-2, JALAN PUTRA MAHKOTA 7/88, SEKSYEN 7, PUTRA HEIGHTS"
-                address="47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
+                name="TEST NAME"
+                address="NO. 5-2, JALAN PUTRA MAHKOTA 7/88, SEKSYEN 7, PUTRA HEIGHTS, 47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
                 accountNumber="100029"
                 id=""
                 styles={{ borderTop: "1px solid black" }}
@@ -133,7 +134,13 @@ const InvoiceDocument = () => {
           <HandlingInfo handlingInfo="SHC: Fruit, vegetables" />
 
           {/* Table */}
-          <View style={{ flexGrow: 1, border: "1px solid black" }}>
+          <View
+            style={{
+              flexGrow: 1,
+              border: "1px solid black",
+              marginTop: "-1px",
+            }}
+          >
             <TableHeaderRow />
             <TableMainRow style={{ flexGrow: 1 }} />
             <TableMainRow
@@ -206,7 +213,7 @@ const InvoiceDocument = () => {
               />
               <ChargesRow
                 firstCol={""}
-                secondCol={""}
+                secondCol={"300"}
                 thirdCol={""}
                 forthCol={""}
                 fifthCol={""}

@@ -8,6 +8,7 @@ const ShipperCertifies = () => {
         borderTop: "1px solid black",
         borderRight: "1px solid black",
         flexGrow: 1,
+        fontSize: 6,
       }}
     >
       <Text>

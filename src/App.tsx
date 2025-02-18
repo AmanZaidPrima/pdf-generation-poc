@@ -1,4 +1,4 @@
-import HTMLPDF from "./components/HTMLPDF";
+// import HTMLPDF from "./components/HTMLPDF";
 import Renderer from "./components/PDFRenderer";
 
 export default function App() {

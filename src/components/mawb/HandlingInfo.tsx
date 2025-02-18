@@ -13,7 +13,7 @@ const HandlingInfo = ({ handlingInfo = "", style = {} }) => {
       <View
         style={{
           position: "relative",
-          height: "30px",
+          minHeight: "20px",
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "2px 0px",

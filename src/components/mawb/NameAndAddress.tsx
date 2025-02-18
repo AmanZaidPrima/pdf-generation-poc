@@ -16,17 +16,13 @@ const NameAddress = ({
 }) => {
   const typeLabel = TYPE_LABELS[type];
 
-  // Function to determine font size based on address length
-  const getFontSize = (address = "") => {
-    const addressLength = address.length;
+  const getFontSize = (address = "", name = "") => {
+    const charLength = name.length + address.length;
 
-    // Define font size thresholds
-    if (addressLength < 50) {
-      return 12; // Smaller font for short address
-    } else if (addressLength >= 50 && addressLength < 100) {
-      return 10; // Medium font for medium address
+    if (charLength < 50) {
+      return 7;
     } else {
-      return 8; // Smaller font for long address
+      return 6;
     }
   };
 
@@ -42,12 +38,12 @@ const NameAddress = ({
       }}
     >
       <View style={{ flex: 0.6 }}>
-        <Text style={{ fontFamily: "Helvetica-Bold" }}>
+        <Text style={{ fontSize: 8, fontFamily: "Helvetica-Bold" }}>
           {`${typeLabel} Name and Address`}
         </Text>
         <View style={{ margin: "auto 0" }}>
-          <Text>{name}</Text>
-          <Text>{address}</Text>
+          <Text style={{ fontSize: addressFontSize }}>{name}</Text>
+          <Text style={{ fontSize: addressFontSize }}>{address}</Text>
         </View>
       </View>
       <View style={{ flex: 0.4 }}>
@@ -61,6 +57,7 @@ const NameAddress = ({
         >
           <Text
             style={{
+              fontSize: 8,
               fontFamily: "Helvetica-Bold",
               marginBottom: "1px",
             }}

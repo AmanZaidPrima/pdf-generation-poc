@@ -57,7 +57,7 @@ const TotalCollectAndBarCode = ({
         }}
       >
         <View>
-          <Text style={{ marginBottom: "2px" }}>{mawbcode}</Text>
+          <Text style={{ marginBottom: "1px" }}>{mawbcode}</Text>
           {barcode && (
             <Image src={barcode} style={{ width: 100, height: 15 }} />
           )}

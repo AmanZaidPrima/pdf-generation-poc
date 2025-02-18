@@ -11,10 +11,12 @@ const TableMainRow = ({
   rate = "",
   total = "",
   natureAndQuantity = "",
+  style = {},
 }) => {
   return (
     <View
       style={{
+        ...style,
         flexDirection: "row",
       }}
     >

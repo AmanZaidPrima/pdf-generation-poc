@@ -1,13 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  PDFDownloadLink,
-  Image,
-} from "@react-pdf/renderer";
+import React, { useState } from "react";
+import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 import { PDFViewer } from "@react-pdf/renderer";
 import TableMainRow from "./mawb/TableMainRow";
 import TableHeaderRow from "./mawb/TableHeaderRow";
@@ -36,23 +28,13 @@ import SignatureOfIssuingCarrier from "./mawb/SignatureOfIssuingCarrier";
 import TotalCollectAndBarCode from "./mawb/TotalCollectAndBarCode";
 import PageEndRow from "./mawb/PageEndRow";
 
-// Styles for PDF
-const styles = StyleSheet.create({
-  page: {
-    padding: 10,
-  },
-  borderTop: {
-    borderTop: "1px solid black",
-  },
-});
-
 // PDF Document Component
 const InvoiceDocument = () => {
-  const arr = Array(5).fill("dummy");
+  const arr = Array(0).fill("dummy");
 
   return (
-    <Document style={{ backgroundColor: "green" }}>
-      <Page size="A4" style={styles.page}>
+    <Document>
+      <Page size="A4" style={{ padding: 10 }}>
         <View
           style={{
             minHeight: "100%",
@@ -62,15 +44,7 @@ const InvoiceDocument = () => {
         >
           <PageStartRow
             leftText="807 | KUL | 11223590"
-            rightText="807-11223590"
-            style={{
-              backgroundColor: "orange",
-              "@media max-width: 1000": {
-                backgroundColor: "purple",
-                fontSize: 7,
-              },
-              width: "30vw",
-            }}
+            rightText={`807-11223590`}
           />
 
           <View
@@ -105,7 +79,11 @@ const InvoiceDocument = () => {
               <IssuingCarriersAgentNameAndCity agentNameAndCity="99Speed LGK LGK" />
             </View>
             <View
-              style={{ flex: 1, border: "1px solid black", borderBottom: 0 }}
+              style={{
+                flex: 1,
+                border: "1px solid black",
+                borderBottom: 0,
+              }}
             >
               <IssuedBy airWaybill="AIR CONSIGNMENT NOTE" issuedby="AirAsia" />
               <Agreement />
@@ -154,8 +132,9 @@ const InvoiceDocument = () => {
           <HandlingInfo handlingInfo="SHC: Fruit, vegetables" />
 
           {/* Table */}
-          <View style={{ border: "1px solid black" }}>
+          <View style={{ flexGrow: 1, border: "1px solid black" }}>
             <TableHeaderRow />
+            <TableMainRow style={{ flexGrow: 1 }} />
             <TableMainRow
               noOfPieces={"16"}
               grossWeight={"600"}
@@ -169,7 +148,7 @@ const InvoiceDocument = () => {
                 "Long.. nature and quantity text lorem some more text more text and more text and even more text"
               }
             />
-            {arr.map((itm) => (
+            {arr.map((_, idx) => (
               <TableMainRow
                 noOfPieces={"16"}
                 grossWeight={"600"}
@@ -180,8 +159,10 @@ const InvoiceDocument = () => {
                 rate={"5"}
                 total={"3000"}
                 natureAndQuantity={"Long.. nature and quantity text"}
+                key={idx}
               />
             ))}
+            <TableMainRow style={{ flexGrow: 1 }} />
             <TableFooterRow
               totalNoOfPieces="20"
               totalGrossWeight="1000"
@@ -191,8 +172,12 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              flexGrow: 1,
+              // flexGrow: 1,
               flexDirection: "row",
+              borderTop: "1px solid black",
+              marginTop: "-1px",
+              borderBottom: "1px solid black",
+              marginBottom: "-1px",
             }}
             wrap={false}
           >
@@ -249,8 +234,10 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              flexGrow: 1,
+              // flexGrow: 1,
               flexDirection: "row",
+              borderBottom: "1px solid black",
+              marginBottom: "-1px",
             }}
             wrap={false}
           >
@@ -288,9 +275,10 @@ const InvoiceDocument = () => {
                   borderTop: "1px solid black",
                   borderRight: "1px solid black",
                   padding: "2",
+                  minHeight: "30px",
                 }}
               >
-                <Text style={{ textAlign: "center" }}>
+                <Text style={{ marginTop: "auto", textAlign: "center" }}>
                   Signature of Shipper or his Agent
                 </Text>
               </View>
@@ -299,9 +287,10 @@ const InvoiceDocument = () => {
 
           <View
             style={{
-              flexGrow: 1,
+              // flexGrow: 1,
               flexDirection: "row",
             }}
+            key={"random"}
             wrap={false}
           >
             <View
@@ -337,8 +326,9 @@ const InvoiceDocument = () => {
               <TotalCollectAndBarCode mawbcode="807-66679281" />
             </View>
           </View>
+
+          <PageEndRow />
         </View>
-        <PageEndRow />
       </Page>
     </Document>
   );

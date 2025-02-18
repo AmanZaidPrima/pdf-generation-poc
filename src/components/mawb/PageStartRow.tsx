@@ -12,15 +12,7 @@ const PageStartRow = ({ leftText = "", rightText = "", style = {} }) => {
       }}
     >
       <Text style={{ fontFamily: "Helvetica-Bold" }}>{leftText}</Text>
-      <Text
-        style={{
-          width: "clamp(200px, 70% + 20px, 800px)",
-          backgroundColor: "red",
-          fontFamily: "Helvetica-Bold",
-        }}
-      >
-        {rightText}
-      </Text>
+      <Text style={{ fontFamily: "Helvetica-Bold" }}>{rightText}</Text>
     </View>
   );
 };

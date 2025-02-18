@@ -27,7 +27,6 @@ const ChargesTrapezoids = ({
           style={{
             flex: 1,
             borderRight: "1px solid black",
-            padding: "4px",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
@@ -38,7 +37,6 @@ const ChargesTrapezoids = ({
         <View
           style={{
             flex: 1,
-            padding: "4px",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",

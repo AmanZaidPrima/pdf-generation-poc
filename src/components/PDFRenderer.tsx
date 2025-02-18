@@ -30,11 +30,11 @@ import PageEndRow from "./mawb/PageEndRow";
 
 // PDF Document Component
 const InvoiceDocument = () => {
-  const arr = Array(0).fill("dummy");
+  const arr = Array(10).fill("dummy");
 
   return (
     <Document>
-      <Page size="A4" style={{ padding: 10 }}>
+      <Page size="A4" style={{ padding: 8 }}>
         <View
           style={{
             minHeight: "100%",

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Trapezoid = ({ text }) => {
+const Trapezoid = ({ text = "" }) => {
   return (
     <View style={styles.trapezoidContainer}>
       <View style={styles.trapezoid}>

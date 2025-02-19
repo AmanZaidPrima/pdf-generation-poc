@@ -61,7 +61,7 @@ const TableHeaderRow = () => {
       <View
         style={{
           flex: 1.2,
-          padding: 2,
+          padding: "1px 2px 1px 2px",
           marginTop: "auto",
           borderTop: "1px solid black",
           borderLeft: "1px solid black",

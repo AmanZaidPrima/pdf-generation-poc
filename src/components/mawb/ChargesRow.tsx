@@ -14,7 +14,6 @@ const ChargesRow = ({
         flexGrow: 1,
         flexDirection: "row",
         borderBottom: "1px solid black",
-        fontSize: 6,
       }}
     >
       <View

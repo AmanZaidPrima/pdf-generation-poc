@@ -10,7 +10,11 @@ const AirportOfDestination = ({
 }) => {
   return (
     <View
-      style={{ borderTop: "1px solid black", minHeight: "30px", ...styles }}
+      style={{
+        borderTop: "1px solid black",
+        minHeight: "30px",
+        ...styles,
+      }}
     >
       <View style={{ flexDirection: "row" }}>
         <View

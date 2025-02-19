@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   trapezoidContainer: {
     position: "relative",
     width: "100%",
-    height: 10,
+    height: 12,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
   trapezoid: {
     width: "100%",
-    height: 10,
+    height: 12,
     justifyContent: "center", // Center text vertically
     alignItems: "center", // Center text horizontally
     borderBottomWidth: 1,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   sideBorderLeft: {
     position: "absolute",
     top: 0,
-    left: -3,
+    left: -4,
     width: 1,
     height: "100%",
     backgroundColor: "black",
@@ -34,16 +34,16 @@ const styles = StyleSheet.create({
   sideBorderRight: {
     position: "absolute",
     top: 0,
-    right: -3,
+    right: -4,
     width: 1,
     height: "100%",
     backgroundColor: "black",
     transform: "skewX(-30deg)",
   },
   text: {
-    fontSize: 6,
     fontWeight: "bold",
     textAlign: "center",
+    fontSize: 6,
   },
 });
 

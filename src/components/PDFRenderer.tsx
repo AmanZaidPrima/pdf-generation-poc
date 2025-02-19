@@ -31,8 +31,25 @@ import { dummyData } from "../dummy_data";
 
 // PDF Document Component
 const InvoiceDocument = () => {
-  console.log("length:", dummyData.length);
-  const arr = dummyData.slice(0, 5);
+  const arr = dummyData.tableItems.slice(0, 23);
+
+  // Define min, max, and base font sizes
+  const minFontSize = 6;
+  const maxFontSize = 8;
+
+  const totalTextLength =
+    dummyData.consignee.name.length +
+    dummyData.shipper.name.length +
+    dummyData.shipper.address.length +
+    dummyData.agentNameAndCity.length +
+    arr.reduce((sum, item) => sum + item.natureAndQuantity.length, 0);
+
+  const fontSize = Math.max(
+    minFontSize,
+    Math.min(-0.004 * totalTextLength + 9, maxFontSize)
+  );
+
+  console.log("fontSize: ", fontSize);
 
   return (
     <Document>
@@ -41,7 +58,7 @@ const InvoiceDocument = () => {
           style={{
             minHeight: "100%",
             flexDirection: "column",
-            fontSize: 7,
+            fontSize: fontSize,
           }}
         >
           <PageStartRow
@@ -65,20 +82,22 @@ const InvoiceDocument = () => {
             >
               <NameAddress
                 type="shipper"
-                name="TEST NAME"
-                address="NO. 5-2, JALAN PUTRA MAHKOTA 7/88, SEKSYEN 7, PUTRA HEIGHTS, 47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
-                accountNumber="100223"
-                id=""
+                name={dummyData.shipper.name}
+                address={dummyData.shipper.address}
+                accountNumber={dummyData.shipper.accountNumber}
+                id={dummyData.shipper.id}
               />
               <NameAddress
                 type="consignee"
-                name="TEST NAME"
-                address="NO. 5-2, JALAN PUTRA MAHKOTA 7/88, SEKSYEN 7, PUTRA HEIGHTS, 47550 SUBANG JAYA, SELANGOR DARUL EHSAN, MALAYSIA"
-                accountNumber="100029"
-                id=""
+                name={dummyData.consignee.name}
+                address={dummyData.consignee.address}
+                accountNumber={dummyData.consignee.accountNumber}
+                id={dummyData.consignee.id}
                 styles={{ borderTop: "1px solid black" }}
               />
-              <IssuingCarriersAgentNameAndCity agentNameAndCity="99Speed LGK LGK" />
+              <IssuingCarriersAgentNameAndCity
+                agentNameAndCity={dummyData.agentNameAndCity}
+              />
             </View>
             <View
               style={{

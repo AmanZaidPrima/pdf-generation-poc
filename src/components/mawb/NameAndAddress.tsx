@@ -16,19 +16,6 @@ const NameAddress = ({
 }) => {
   const typeLabel = TYPE_LABELS[type];
 
-  const getFontSize = (address = "", name = "") => {
-    const charLength = name.length + address.length;
-
-    if (charLength < 50) {
-      return 7;
-    } else {
-      return 6;
-    }
-  };
-
-  // Calculate font size for the address text
-  const addressFontSize = getFontSize(address);
-
   return (
     <View
       style={{
@@ -38,12 +25,12 @@ const NameAddress = ({
       }}
     >
       <View style={{ flex: 0.6 }}>
-        <Text style={{ fontSize: 8, fontFamily: "Helvetica-Bold" }}>
+        <Text style={{ fontFamily: "Helvetica-Bold" }}>
           {`${typeLabel} Name and Address`}
         </Text>
         <View style={{ margin: "auto 0" }}>
-          <Text style={{ fontSize: addressFontSize }}>{name}</Text>
-          <Text style={{ fontSize: addressFontSize }}>{address}</Text>
+          <Text>{name}</Text>
+          <Text>{address}</Text>
         </View>
       </View>
       <View style={{ flex: 0.4 }}>

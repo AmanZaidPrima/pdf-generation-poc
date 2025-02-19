@@ -3,24 +3,26 @@ import React from "react";
 
 const AgentInfo = ({ agentIATACode = "", agentAccountNo = "" }) => {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style={{ flexGrow: 1, flexDirection: "row" }}>
       <View style={{ flex: 1 }}>
         <View
           style={{
             borderBottom: "1px solid black",
             borderRight: "1px solid black",
             padding: "2px",
+            flexGrow: 1,
           }}
         >
-          <Text>Agent's IATA Code</Text>
+          <Text style={{ margin: "auto 0" }}>Agent's IATA Code</Text>
         </View>
         <View
           style={{
             borderRight: "1px solid black",
             padding: "2px",
+            flexGrow: 1,
           }}
         >
-          <Text>{agentIATACode}</Text>
+          <Text style={{ margin: "auto 0" }}>{agentIATACode}</Text>
         </View>
       </View>
       <View style={{ flex: 1 }}>
@@ -28,12 +30,13 @@ const AgentInfo = ({ agentIATACode = "", agentAccountNo = "" }) => {
           style={{
             borderBottom: "1px solid black",
             padding: "2px",
+            flexGrow: 1,
           }}
         >
-          <Text>Account No.</Text>
+          <Text style={{ margin: "auto 0" }}>Account No.</Text>
         </View>
-        <View style={{ padding: "2px" }}>
-          <Text>{agentAccountNo}</Text>
+        <View style={{ padding: "2px", flexGrow: 1 }}>
+          <Text style={{ margin: "auto 0" }}>{agentAccountNo}</Text>
         </View>
       </View>
     </View>
